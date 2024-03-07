@@ -3,6 +3,7 @@ mypy
 tqdm
 fastapi
 gradio
+python-multipart
 
 # LLM
 langchain
