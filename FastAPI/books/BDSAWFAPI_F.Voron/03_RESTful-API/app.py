@@ -1,56 +1,25 @@
-# first_endpoint.py
+# app.py
 from enum import Enum
 from fastapi import (
-    Body, Cookie, FastAPI, File, Form, Header, Path, Query, Request, Response,
-    status, UploadFile
+    Body, Cookie, FastAPI, File, Form, HTTPException, Header, Path, Query, 
+    Request, Response, status, UploadFile
 )
+from fastapi.responses import (
+    FileResponse, HTMLResponse, PlainTextResponse, RedirectResponse
+)
+import pathlib
 from pydantic import BaseModel
 from typing import Union
 
-# *-----------------------------------------------------------------------------
+from routers.posts import router as posts_router
+from routers.users import router as users_router
 
-# Define string enumeration by inheriting from str type and Enum class.
-
-
-class UserType(str, Enum):
-    # List allowed values as class properties: property name and string value.
-    STANDARD = "standard"
-    ADMIN = "admin"
-
-
-class UsersFormat(str, Enum):
-    SHORT = "short"
-    FULL = "full"
-
-
-class User(BaseModel):
-    name: str
-    age: int
-
-
-class Company(BaseModel):
-    # Pydantic model with a single string name property.
-    name: str
-
-
-class Post(BaseModel):
-    title: str
-    # The nb_views property is in the output. We don’t want this.
-    nb_views: int
-
-
-class PublicPost(BaseModel):
-    title: str
-# *-----------------------------------------------------------------------------
-
-
-# Dummy DB
-posts = {
-    1: Post(title="Hello", nb_views=100)
-}
 # *-----------------------------------------------------------------------------
 
 app = FastAPI()
+
+app.include_router(posts_router, prefix="/posts", tags=["posts"])
+app.include_router(users_router, prefix="/users", tags=["users"])
 
 # Define a GET endpoint at the root path
 # Always returning {"hello": "world"} JSON response.
@@ -117,66 +86,6 @@ async def custom_cookie(response: Response):
     response.set_cookie("cookie-name", "cookie-value", max_age=86400)
     return {
         "hello": "world",
-    }
-
-
-@app.get("/users")
-# Declare query parameters as arguments of path operation function.
-# If not in path pattern, FastAPI considers them as query parameters.
-async def get_user(
-    format: UsersFormat,
-    # Force page greater than 0 and size less than or equal to 100.
-    page: int = Query(1, gt=0),  # Default 1
-    size: int = Query(10, lt=100),
-):
-    # Omitting the format parameter in the URL results in a 422 error response.
-    # UsersFormat enumeration limits the allowed values for this parameter
-    return {
-        "page": page,
-        "size": size,
-        "format": format,
-    }
-
-
-@app.get("/users/{id}")
-# API expects integer in path.
-# Parameter name in path with curly braces.
-# specifying integer.
-# Same parameter defined as argument for path operation function with type hint
-async def get_user_with_id(id: int = Path(..., ge=1)):
-    # Value of Path is default value for the id argument
-    # Ellipsis syntax indicates no default value is expected, parameter is required
-    return {
-        "id": id,
-    }
-
-
-@app.get("/users/{type}/{id}")
-async def get_user_with_type_id(type: UserType, id: int):
-    # Type hint type argument with enum class.
-    # The endpoint accepts any string as the type parameter.
-    return {
-        "type": type,
-        "id": id,
-    }
-
-
-@app.post("/users")
-# argument `user` for path operation function with User class as type hint.
-# FastAPI understands `user` data in request payload.
-# Access user object instance's properties using dot notation (user.name).
-async def create_user(
-    user: User,
-    company: Company,
-    # Singular body values for a single property not part of any model.
-    # integer between 1 and 3
-    priority: int = Body(..., ge=1, le=3),
-):
-    return {
-        # FastAPI automatically converts the object into JSON for the HTTP response.
-        "user": user,
-        "company": company,
-        "priority": priority,
     }
 
 
@@ -248,27 +157,71 @@ async def get_request_object(request: Request):
     }
 
 
-@app.get("/posts/{id}", response_model=PublicPost)
-# nb_views property no longer present. response_model option converts Post
-# instance to PublicPost instance before serialization, keeping private data safe.
-async def get_post(id: int):
-    return posts[id]
-
-
-@app.post("/posts", status_code=status.HTTP_201_CREATED)
-async def create_post(post: Post):
-    return post
-
-@app.put("/posts/{id}")
-async def update_or_create_post(
-  id: int, post: Post, response: Response  
+@app.post("/password")
+async def check_password(
+    password: str = Body(...),
+    password_confirm: str = Body(...),
 ):
-  # Check if the ID in the path exists in the database. 
-  # If not, change the status code to 201. 
-  if id not in posts:
-    response.status_code = status.HTTP_201_CREATED
-  
-  # Assign the post to this ID in the database.
-  posts[id] = post
-  
-  return posts[id]
+    if password != password_confirm:
+        # Raise a 400 Bad Request error if the password and password_ confirm
+        # payload properties don’t match.
+        # Error message wrapped in a JSON object with detail key.
+        raise HTTPException(
+            status.HTTP_400_BAD_REQUEST,
+            detail={
+                "message": "Passwords don't match.",
+                "hints": [
+                    "Check the caps lock on your keyboard.",
+                    ("Try to make the password visible by clicking on the eye "
+                     "icon to check your typing.")
+                ]
+            }
+        )
+    return {
+        "message": "Passwords match."
+    }
+
+
+@app.get("/html", response_class=HTMLResponse)
+# By setting response_class argument on decorator, change class used by FastAPI
+# to build response.
+async def get_html():
+    # Return valid data for this response.
+    return """
+        <html>
+            <head>
+                <title>Hello world!</title>
+            </head>
+            <body>
+                <h1>Hello world!</h1>
+            </body>
+        </html>
+        """
+
+
+@app.get("/text", response_class=PlainTextResponse)
+async def text():
+    return "Hello World!"
+
+
+@app.get("/redirect")
+async def redirect():
+    return RedirectResponse(
+        "http://google.com/", status_code=status.HTTP_301_MOVED_PERMANENTLY,
+    )
+
+
+@app.get("/cat")
+async def get_cat():
+    root_directory = pathlib.Path(__file__).parent.parent
+    picture_path = root_directory / "assets" / "cat.jpg"
+    return FileResponse(picture_path)
+
+
+@app.get("/xml")
+# Return an XML response.
+async def get_xml():
+    content = """<?xml version="1.0" encoding="UTF-8"?>
+        <Hello>World</Hello>
+    """
+    return Response(content=content, media_type="application/xml")
