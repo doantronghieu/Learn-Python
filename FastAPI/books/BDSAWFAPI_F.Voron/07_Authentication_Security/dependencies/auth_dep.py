@@ -2,7 +2,7 @@ from datetime import datetime, timezone
 from typing import Union
 
 from fastapi import Depends, HTTPException, status
-from fastapi.security import OAuth2PasswordBearer
+from fastapi.security import APIKeyCookie, OAuth2PasswordBearer
 
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -11,9 +11,8 @@ from sql_toolkit.database import get_async_session
 from sql_toolkit.models import User, AccessToken
 
 async def get_current_user(
-  # Checks for the access token in the Authorization header and informs the 
-  # OpenAPI schema that the endpoint to get a fresh token is tokenUrl.
-  token: str = Depends(OAuth2PasswordBearer(tokenUrl="/users/token")),
+  # retrieve the token from the cookie sent in the request
+  token: str = Depends(APIKeyCookie(name="token")),
   session: AsyncSession = Depends(get_async_session)
 ) -> User:
   # Match token and ensure expiration date is in the future

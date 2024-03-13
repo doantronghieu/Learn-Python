@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, status, Response, Form
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 
 from sqlalchemy import select, exc
@@ -11,6 +11,8 @@ from sql_toolkit.database import get_async_session
 from sql_toolkit.models import User
 
 from utils import security_util, authen_util
+
+from dependencies import auth_dep
 
 router = APIRouter()
 
@@ -60,3 +62,47 @@ async def create_token(
     "access_token": token.access_token,
     "token_type": "bearer",
   }
+
+@router.post("/login")
+async def login(
+  response: Response,
+  email: str = Form(...),
+  password: str = Form(...),
+  session: AsyncSession = Depends(get_async_session),
+):
+  user = await authen_util.authenticate(email, password, session)
+  if not user:
+    raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED)
+  
+  token = await authen_util.create_access_token(user, session)
+  
+  response.set_cookie(
+    key="token",
+    value=token.access_token,
+    max_age=token.max_age(),
+    # sent only over HTTPS and value can't be read from JavaScript
+    secure=True,
+    httponly=True,
+    # control cookie sent in cross-origin context
+    # allows cookie to be sent to subdomains but prevents for other sites
+    samesite="lax",
+  )
+  
+@router.get("/me", response_model=user_schema.UserRead)
+async def get_me(user : User = Depends(auth_dep.get_current_user)):
+  return user
+
+@router.post("/me", response_model=user_schema.UserRead)
+async def update_me(
+  user_update: user_schema.UserUpdate,
+  user: User = Depends(auth_dep.get_current_user),
+  session: AsyncSession = Depends(get_async_session),
+):
+  user_update_dict = user_update.model_dump(exclude_unset=True)
+  for key, value in user_update_dict.items():
+    setattr(user, key, value)
+    
+  session.add(user)
+  await session.commit()
+  
+  return user

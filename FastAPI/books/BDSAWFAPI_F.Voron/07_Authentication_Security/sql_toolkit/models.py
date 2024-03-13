@@ -1,5 +1,5 @@
 import secrets
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Union
 
 from sqlalchemy import select, DateTime, ForeignKey, Integer, String, Text
@@ -41,8 +41,13 @@ class AccessToken(Base):
     )
     # default validity of 24 hours
     expiration_date: Mapped[datetime] = mapped_column(
-        DateTime(timezone=True), nullable=False, default=security_util.get_expiration_date,
+        DateTime(timezone=True), nullable=False, 
+        default=security_util.get_expiration_date,
     )
     # relationship to access the user entity from an access token object
     # always retrieve the user when querying for an access token
     user: Mapped[User] = relationship("User", lazy="joined")
+
+    def max_age(self) -> int:
+        delta = self.expiration_date - datetime.now(tz=timezone.utc)
+        return int(delta.total_seconds())

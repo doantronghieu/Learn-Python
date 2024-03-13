@@ -1,4 +1,5 @@
 from typing import Union
+from fastapi import Depends
 
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -31,3 +32,4 @@ async def create_access_token(
     session.add(access_token)
     await session.commit()
     return access_token
+
