@@ -4,3 +4,5 @@ fastapi
 sqlalchemy[asyncio]
 uvicorn[standard]
 gunicorn
+psycopg2
+asyncpg
