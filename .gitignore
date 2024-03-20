@@ -1,3 +1,4 @@
 **/.env
 **/cache
-
+**/grafana-agent-linux-amd64
+**/agent-config.yaml
