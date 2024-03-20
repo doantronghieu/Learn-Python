@@ -1,0 +1,434 @@
+2024-03-19 17:03:14.500 | DEBUG    | routers.router_test_logging:is_even:12 - Check if even
+2024-03-19 17:03:14.500 | ERROR    | routers.router_test_logging:is_even:14 - Not an integer
+2024-03-19 17:12:38.869 | DEBUG    | routers.router_test_logging:is_even:12 - Check if even
+2024-03-19 17:14:13.306 | DEBUG    | dependencies.dep_auth_sec:secret_header:7 - Check secret header
+2024-03-19 17:14:13.307 | DEBUG    | routers.router_test_logging:is_even:13 - Check if even
+2024-03-19 17:14:25.438 | DEBUG    | dependencies.dep_auth_sec:secret_header:7 - Check secret header
+2024-03-19 17:14:25.439 | DEBUG    | routers.router_test_logging:is_even:13 - Check if even
+2024-03-19 17:14:29.162 | DEBUG    | dependencies.dep_auth_sec:secret_header:7 - Check secret header
+2024-03-19 17:14:29.162 | WARNING  | dependencies.dep_auth_sec:secret_header:9 - Invalid of missing secret header
+2024-03-19 17:31:53.116 | INFO     | uvicorn.server:serve:76 - Started server process [497125]
+2024-03-19 17:31:53.116 | INFO     | uvicorn.lifespan.on:startup:46 - Waiting for application startup.
+2024-03-19 17:31:53.116 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2024-03-19 17:32:08.549 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55818 - "GET /docs HTTP/1.1" 200
+2024-03-19 17:32:08.699 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55818 - "GET /openapi.json HTTP/1.1" 200
+2024-03-19 17:32:08.703 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55818 - "GET /docs HTTP/1.1" 200
+2024-03-19 17:32:19.573 | DEBUG    | dependencies.dep_auth_sec:secret_header:7 - Check secret header
+2024-03-19 17:32:19.573 | DEBUG    | routers.router_test_logging:is_even:13 - Check if even
+2024-03-19 17:32:19.574 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:48440 - "POST /test-logging/is-even?n=2 HTTP/1.1" 200
+2024-03-19 17:32:27.859 | DEBUG    | dependencies.dep_auth_sec:secret_header:7 - Check secret header
+2024-03-19 17:32:27.860 | WARNING  | dependencies.dep_auth_sec:secret_header:9 - Invalid of missing secret header
+2024-03-19 17:32:27.860 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:57342 - "POST /test-logging/is-even?n=2 HTTP/1.1" 403
+2024-03-19 17:32:37.902 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2024-03-19 17:32:38.002 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2024-03-19 17:32:38.002 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2024-03-19 17:32:38.002 | INFO     | uvicorn.server:serve:86 - Finished server process [497125]
+2024-03-19 21:35:05.631 | INFO     | uvicorn.server:serve:76 - Started server process [799156]
+2024-03-19 21:35:05.631 | INFO     | uvicorn.lifespan.on:startup:46 - Waiting for application startup.
+2024-03-19 21:35:05.631 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2024-03-19 21:35:12.314 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:39686 - "GET /docs HTTP/1.1" 200
+2024-03-19 21:35:12.464 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:39686 - "GET /openapi.json HTTP/1.1" 200
+2024-03-19 21:35:12.479 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:39686 - "GET /docs HTTP/1.1" 200
+2024-03-19 21:35:23.479 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54832 - "GET / HTTP/1.1" 200
+2024-03-19 21:35:27.830 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54832 - "GET /metrics HTTP/1.1" 200
+2024-03-19 21:36:50.521 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2024-03-19 21:36:50.622 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2024-03-19 21:36:50.623 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2024-03-19 21:36:50.623 | INFO     | uvicorn.server:serve:86 - Finished server process [799156]
+2024-03-19 21:39:43.196 | INFO     | uvicorn.server:serve:76 - Started server process [816906]
+2024-03-19 21:39:43.196 | INFO     | uvicorn.lifespan.on:startup:46 - Waiting for application startup.
+2024-03-19 21:39:43.196 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2024-03-19 21:39:48.942 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:45620 - "GET /docs HTTP/1.1" 200
+2024-03-19 21:39:49.078 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:45620 - "GET /openapi.json HTTP/1.1" 200
+2024-03-19 21:39:49.086 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:45620 - "GET /docs HTTP/1.1" 200
+2024-03-19 21:40:16.983 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2024-03-19 21:40:17.084 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2024-03-19 21:40:17.084 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2024-03-19 21:40:17.084 | INFO     | uvicorn.server:serve:86 - Finished server process [816906]
+2024-03-19 21:52:07.050 | INFO     | uvicorn.server:serve:76 - Started server process [864318]
+2024-03-19 21:52:07.050 | INFO     | uvicorn.lifespan.on:startup:46 - Waiting for application startup.
+2024-03-19 21:52:07.051 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2024-03-19 21:52:11.866 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:49716 - "GET /docs HTTP/1.1" 200
+2024-03-19 21:52:11.987 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:49716 - "GET /openapi.json HTTP/1.1" 200
+2024-03-19 21:52:12.064 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:49716 - "GET /docs HTTP/1.1" 200
+2024-03-19 21:52:18.207 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:34454 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-19 21:52:20.235 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:34454 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-19 21:52:20.999 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:34454 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-19 21:52:21.673 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:34454 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-19 21:52:21.829 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:34454 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-19 21:52:25.337 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:34454 - "GET /metrics HTTP/1.1" 200
+2024-03-19 21:52:53.431 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2024-03-19 21:52:53.531 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2024-03-19 21:52:53.532 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2024-03-19 21:52:53.532 | INFO     | uvicorn.server:serve:86 - Finished server process [864318]
+2024-03-20 04:48:17.038 | INFO     | uvicorn.server:serve:76 - Started server process [1055703]
+2024-03-20 04:48:17.038 | INFO     | uvicorn.lifespan.on:startup:46 - Waiting for application startup.
+2024-03-20 04:48:17.038 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2024-03-20 04:48:21.054 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:41680 - "GET /docs HTTP/1.1" 200
+2024-03-20 04:48:21.174 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:41680 - "GET /openapi.json HTTP/1.1" 200
+2024-03-20 04:48:21.236 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:41680 - "GET /docs HTTP/1.1" 200
+2024-03-20 04:48:25.095 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 04:48:26.097 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.14ms.
+2024-03-20 04:48:26.098 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:41680 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 04:48:28.371 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 04:48:29.372 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1000.81ms.
+2024-03-20 04:48:29.372 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:41680 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 04:48:31.745 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 04:48:32.746 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.02ms.
+2024-03-20 04:48:32.747 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:41680 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 04:48:33.305 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 04:48:34.306 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1000.56ms.
+2024-03-20 04:48:34.306 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:41680 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 04:48:34.708 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 04:48:35.709 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.04ms.
+2024-03-20 04:48:35.710 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:41680 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 04:48:42.622 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2024-03-20 04:48:42.722 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2024-03-20 04:48:42.723 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2024-03-20 04:48:42.723 | INFO     | uvicorn.server:serve:86 - Finished server process [1055703]
+2024-03-20 05:27:05.267 | INFO     | uvicorn.server:serve:76 - Started server process [1206966]
+2024-03-20 05:27:05.268 | INFO     | uvicorn.lifespan.on:startup:46 - Waiting for application startup.
+2024-03-20 05:27:05.269 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2024-03-20 05:27:35.598 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:49788 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:28:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59850 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:29:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:44736 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:29:55.308 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 05:29:56.309 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1000.08ms.
+2024-03-20 05:29:56.309 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:37660 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 05:30:07.015 | DEBUG    | dependencies.dep_auth_sec:secret_header:7 - Check secret header
+2024-03-20 05:30:07.016 | DEBUG    | routers.router_test_logging:is_even:13 - Check if even
+2024-03-20 05:30:07.016 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:60356 - "POST /test-logging/is-even?n=12 HTTP/1.1" 200
+2024-03-20 05:30:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:33924 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:31:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:46928 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:32:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:41458 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:33:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:33504 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:34:00.805 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2024-03-20 05:34:00.906 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2024-03-20 05:34:00.906 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2024-03-20 05:34:00.907 | INFO     | uvicorn.server:serve:86 - Finished server process [1206966]
+2024-03-20 05:34:12.360 | INFO     | uvicorn.server:serve:76 - Started server process [1235135]
+2024-03-20 05:34:12.360 | INFO     | uvicorn.lifespan.on:startup:46 - Waiting for application startup.
+2024-03-20 05:34:12.361 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2024-03-20 05:34:35.598 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:43262 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:34:41.009 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2024-03-20 05:34:41.110 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2024-03-20 05:34:41.110 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2024-03-20 05:34:41.110 | INFO     | uvicorn.server:serve:86 - Finished server process [1235135]
+2024-03-20 05:34:42.325 | INFO     | uvicorn.server:serve:76 - Started server process [1237241]
+2024-03-20 05:34:42.325 | INFO     | uvicorn.lifespan.on:startup:46 - Waiting for application startup.
+2024-03-20 05:34:42.326 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2024-03-20 05:35:35.598 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58592 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:35:46.010 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2024-03-20 05:35:46.111 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2024-03-20 05:35:46.111 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2024-03-20 05:35:46.111 | INFO     | uvicorn.server:serve:86 - Finished server process [1237241]
+2024-03-20 05:35:47.083 | INFO     | uvicorn.server:serve:76 - Started server process [1241812]
+2024-03-20 05:35:47.083 | INFO     | uvicorn.lifespan.on:startup:46 - Waiting for application startup.
+2024-03-20 05:35:47.083 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2024-03-20 05:35:51.992 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2024-03-20 05:35:52.092 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2024-03-20 05:35:52.093 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2024-03-20 05:35:52.093 | INFO     | uvicorn.server:serve:86 - Finished server process [1241812]
+2024-03-20 05:35:53.029 | INFO     | uvicorn.server:serve:76 - Started server process [1242299]
+2024-03-20 05:35:53.030 | INFO     | uvicorn.lifespan.on:startup:46 - Waiting for application startup.
+2024-03-20 05:35:53.030 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2024-03-20 05:36:19.885 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2024-03-20 05:36:19.986 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2024-03-20 05:36:19.986 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2024-03-20 05:36:19.986 | INFO     | uvicorn.server:serve:86 - Finished server process [1242299]
+2024-03-20 05:36:21.001 | INFO     | uvicorn.server:serve:76 - Started server process [1244129]
+2024-03-20 05:36:21.002 | INFO     | uvicorn.lifespan.on:startup:46 - Waiting for application startup.
+2024-03-20 05:36:21.002 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2024-03-20 05:36:25.212 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2024-03-20 05:36:25.312 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2024-03-20 05:36:25.313 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2024-03-20 05:36:25.313 | INFO     | uvicorn.server:serve:86 - Finished server process [1244129]
+2024-03-20 05:36:26.236 | INFO     | uvicorn.server:serve:76 - Started server process [1244496]
+2024-03-20 05:36:26.237 | INFO     | uvicorn.lifespan.on:startup:46 - Waiting for application startup.
+2024-03-20 05:36:26.237 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2024-03-20 05:36:26.339 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2024-03-20 05:36:26.439 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2024-03-20 05:36:26.440 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2024-03-20 05:36:26.440 | INFO     | uvicorn.server:serve:86 - Finished server process [1244496]
+2024-03-20 05:36:27.482 | INFO     | uvicorn.server:serve:76 - Started server process [1244584]
+2024-03-20 05:36:27.482 | INFO     | uvicorn.lifespan.on:startup:46 - Waiting for application startup.
+2024-03-20 05:36:27.482 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2024-03-20 05:36:34.296 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2024-03-20 05:36:34.396 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2024-03-20 05:36:34.397 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2024-03-20 05:36:34.397 | INFO     | uvicorn.server:serve:86 - Finished server process [1244584]
+2024-03-20 05:36:35.336 | INFO     | uvicorn.server:serve:76 - Started server process [1245204]
+2024-03-20 05:36:35.337 | INFO     | uvicorn.lifespan.on:startup:46 - Waiting for application startup.
+2024-03-20 05:36:35.337 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2024-03-20 05:36:35.598 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54786 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:36:42.451 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2024-03-20 05:36:42.551 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2024-03-20 05:36:42.551 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2024-03-20 05:36:42.552 | INFO     | uvicorn.server:serve:86 - Finished server process [1245204]
+2024-03-20 05:36:43.462 | INFO     | uvicorn.server:serve:76 - Started server process [1245749]
+2024-03-20 05:36:43.462 | INFO     | uvicorn.lifespan.on:startup:46 - Waiting for application startup.
+2024-03-20 05:36:43.462 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2024-03-20 05:36:43.963 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2024-03-20 05:36:44.063 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2024-03-20 05:36:44.064 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2024-03-20 05:36:44.064 | INFO     | uvicorn.server:serve:86 - Finished server process [1245749]
+2024-03-20 05:36:44.992 | INFO     | uvicorn.server:serve:76 - Started server process [1245896]
+2024-03-20 05:36:44.993 | INFO     | uvicorn.lifespan.on:startup:46 - Waiting for application startup.
+2024-03-20 05:36:44.993 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2024-03-20 05:36:57.442 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2024-03-20 05:36:57.543 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2024-03-20 05:36:57.543 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2024-03-20 05:36:57.544 | INFO     | uvicorn.server:serve:86 - Finished server process [1245896]
+2024-03-20 05:36:58.480 | INFO     | uvicorn.server:serve:76 - Started server process [1246727]
+2024-03-20 05:36:58.480 | INFO     | uvicorn.lifespan.on:startup:46 - Waiting for application startup.
+2024-03-20 05:36:58.480 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2024-03-20 05:37:02.990 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2024-03-20 05:37:03.091 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2024-03-20 05:37:03.091 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2024-03-20 05:37:03.091 | INFO     | uvicorn.server:serve:86 - Finished server process [1246727]
+2024-03-20 05:37:04.023 | INFO     | uvicorn.server:serve:76 - Started server process [1247101]
+2024-03-20 05:37:04.024 | INFO     | uvicorn.lifespan.on:startup:46 - Waiting for application startup.
+2024-03-20 05:37:04.024 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2024-03-20 05:37:07.430 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2024-03-20 05:37:07.531 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2024-03-20 05:37:07.531 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2024-03-20 05:37:07.531 | INFO     | uvicorn.server:serve:86 - Finished server process [1247101]
+2024-03-20 05:37:08.598 | INFO     | uvicorn.server:serve:76 - Started server process [1247422]
+2024-03-20 05:37:08.598 | INFO     | uvicorn.lifespan.on:startup:46 - Waiting for application startup.
+2024-03-20 05:37:08.598 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2024-03-20 05:37:12.106 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2024-03-20 05:37:12.206 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2024-03-20 05:37:12.207 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2024-03-20 05:37:12.207 | INFO     | uvicorn.server:serve:86 - Finished server process [1247422]
+2024-03-20 05:37:13.142 | INFO     | uvicorn.server:serve:76 - Started server process [1247776]
+2024-03-20 05:37:13.143 | INFO     | uvicorn.lifespan.on:startup:46 - Waiting for application startup.
+2024-03-20 05:37:13.143 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2024-03-20 05:37:18.856 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2024-03-20 05:37:18.956 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2024-03-20 05:37:18.956 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2024-03-20 05:37:18.957 | INFO     | uvicorn.server:serve:86 - Finished server process [1247776]
+2024-03-20 05:37:19.843 | INFO     | uvicorn.server:serve:76 - Started server process [1248288]
+2024-03-20 05:37:19.844 | INFO     | uvicorn.lifespan.on:startup:46 - Waiting for application startup.
+2024-03-20 05:37:19.844 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2024-03-20 05:37:21.948 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2024-03-20 05:37:22.049 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2024-03-20 05:37:22.049 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2024-03-20 05:37:22.049 | INFO     | uvicorn.server:serve:86 - Finished server process [1248288]
+2024-03-20 05:37:22.903 | INFO     | uvicorn.server:serve:76 - Started server process [1248455]
+2024-03-20 05:37:22.903 | INFO     | uvicorn.lifespan.on:startup:46 - Waiting for application startup.
+2024-03-20 05:37:22.903 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2024-03-20 05:37:33.027 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2024-03-20 05:37:33.127 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2024-03-20 05:37:33.128 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2024-03-20 05:37:33.128 | INFO     | uvicorn.server:serve:86 - Finished server process [1248455]
+2024-03-20 05:37:34.023 | INFO     | uvicorn.server:serve:76 - Started server process [1249195]
+2024-03-20 05:37:34.023 | INFO     | uvicorn.lifespan.on:startup:46 - Waiting for application startup.
+2024-03-20 05:37:34.023 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2024-03-20 05:37:35.598 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58130 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:37:36.829 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2024-03-20 05:37:36.930 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2024-03-20 05:37:36.930 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2024-03-20 05:37:36.930 | INFO     | uvicorn.server:serve:86 - Finished server process [1249195]
+2024-03-20 05:37:37.857 | INFO     | uvicorn.server:serve:76 - Started server process [1249459]
+2024-03-20 05:37:37.857 | INFO     | uvicorn.lifespan.on:startup:46 - Waiting for application startup.
+2024-03-20 05:37:37.858 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2024-03-20 05:37:50.684 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2024-03-20 05:37:50.785 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2024-03-20 05:37:50.785 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2024-03-20 05:37:50.785 | INFO     | uvicorn.server:serve:86 - Finished server process [1249459]
+2024-03-20 05:37:51.695 | INFO     | uvicorn.server:serve:76 - Started server process [1250435]
+2024-03-20 05:37:51.696 | INFO     | uvicorn.lifespan.on:startup:46 - Waiting for application startup.
+2024-03-20 05:37:51.696 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2024-03-20 05:37:56.005 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2024-03-20 05:37:56.105 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2024-03-20 05:37:56.106 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2024-03-20 05:37:56.106 | INFO     | uvicorn.server:serve:86 - Finished server process [1250435]
+2024-03-20 05:38:03.947 | INFO     | uvicorn.server:serve:76 - Started server process [1251226]
+2024-03-20 05:38:03.948 | INFO     | uvicorn.lifespan.on:startup:46 - Waiting for application startup.
+2024-03-20 05:38:03.948 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2024-03-20 05:38:07.955 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2024-03-20 05:38:08.055 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2024-03-20 05:38:08.055 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2024-03-20 05:38:08.055 | INFO     | uvicorn.server:serve:86 - Finished server process [1251226]
+2024-03-20 05:38:10.704 | INFO     | uvicorn.server:serve:76 - Started server process [1251695]
+2024-03-20 05:38:10.704 | INFO     | uvicorn.lifespan.on:startup:46 - Waiting for application startup.
+2024-03-20 05:38:10.704 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2024-03-20 05:38:17.275 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:40848 - "GET /docs HTTP/1.1" 200
+2024-03-20 05:38:17.411 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:40848 - "GET /openapi.json HTTP/1.1" 200
+2024-03-20 05:38:17.420 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:40848 - "GET /docs HTTP/1.1" 200
+2024-03-20 05:38:21.208 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 05:38:22.209 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1000.07ms.
+2024-03-20 05:38:22.209 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:40848 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 05:38:35.598 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53216 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:39:35.597 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59092 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:40:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56008 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:41:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54984 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:42:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:42032 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:43:35.597 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59672 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:44:35.597 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:43032 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:45:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:40476 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:46:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:60160 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:47:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:41948 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:48:35.597 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:38596 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:49:35.597 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:57870 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:50:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:60538 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:51:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:43974 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:52:35.597 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:45122 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:53:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55182 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:54:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:41866 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:55:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:48362 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:56:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:47416 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:57:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:37392 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:58:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:50608 - "GET /metrics HTTP/1.1" 200
+2024-03-20 05:59:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:38424 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:00:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:57346 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:01:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:42078 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:02:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55942 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:03:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:50846 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:04:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:36110 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:05:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:35700 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:06:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:37710 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:07:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:45960 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:08:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:42240 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:09:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:39622 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:10:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:47616 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:11:35.595 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:37246 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:12:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:49634 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:13:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:46264 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:14:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:44302 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:15:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56870 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:16:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:60640 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:17:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:47930 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:18:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:45426 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:19:35.597 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:36598 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:20:34.672 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:20:35.673 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.10ms.
+2024-03-20 06:20:35.674 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56100 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:20:35.675 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:45682 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:20:36.333 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:20:37.335 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.05ms.
+2024-03-20 06:20:37.335 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56100 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:20:37.728 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:20:38.730 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.12ms.
+2024-03-20 06:20:38.731 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56100 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:20:39.116 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:20:40.118 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.04ms.
+2024-03-20 06:20:40.118 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56100 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:20:40.441 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:20:41.442 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1000.08ms.
+2024-03-20 06:20:41.442 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56100 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:20:41.948 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:20:42.949 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.09ms.
+2024-03-20 06:20:42.950 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56100 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:20:43.319 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:20:44.320 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1000.24ms.
+2024-03-20 06:20:44.320 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56100 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:20:44.722 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:20:45.723 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.09ms.
+2024-03-20 06:20:45.723 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56100 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:20:46.055 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:20:47.056 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1000.63ms.
+2024-03-20 06:20:47.057 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56100 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:20:47.442 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:20:48.444 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1000.76ms.
+2024-03-20 06:20:48.444 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56100 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:20:48.635 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:20:49.636 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1000.75ms.
+2024-03-20 06:20:49.637 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56100 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:20:50.028 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:20:51.030 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.05ms.
+2024-03-20 06:20:51.030 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56100 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:20:51.338 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:20:52.339 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.08ms.
+2024-03-20 06:20:52.340 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56100 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:20:52.661 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:20:53.661 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1000.05ms.
+2024-03-20 06:20:53.662 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56100 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:20:53.805 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:20:54.806 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.04ms.
+2024-03-20 06:20:54.807 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56100 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:20:54.882 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:20:55.884 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1000.88ms.
+2024-03-20 06:20:55.884 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56100 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:20:55.999 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:20:57.000 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1000.53ms.
+2024-03-20 06:20:57.000 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56100 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:20:57.216 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:20:58.217 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.05ms.
+2024-03-20 06:20:58.218 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56100 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:20:58.339 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:20:59.340 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1000.09ms.
+2024-03-20 06:20:59.340 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56100 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:20:59.600 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:21:00.600 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1000.30ms.
+2024-03-20 06:21:00.601 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56100 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:21:01.510 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:21:02.511 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.06ms.
+2024-03-20 06:21:02.512 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56100 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:21:02.594 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:21:03.595 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.05ms.
+2024-03-20 06:21:03.595 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56100 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:21:03.934 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:21:04.936 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.04ms.
+2024-03-20 06:21:04.936 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56100 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:21:05.261 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:21:06.263 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.04ms.
+2024-03-20 06:21:06.263 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56100 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:21:06.501 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:21:07.502 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.09ms.
+2024-03-20 06:21:07.503 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56100 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:21:07.861 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:21:08.863 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.05ms.
+2024-03-20 06:21:08.863 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56100 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:21:35.597 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53654 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:22:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:50300 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:23:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53228 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:24:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:45962 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:25:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:39786 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:26:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:50500 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:27:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:41854 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:28:35.597 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:34144 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:29:31.379 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:29:32.381 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.06ms.
+2024-03-20 06:29:32.381 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54790 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:29:32.795 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:29:33.797 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.05ms.
+2024-03-20 06:29:33.797 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54790 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:29:35.353 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:29:36.354 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.04ms.
+2024-03-20 06:29:36.355 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54790 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:29:36.357 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:39294 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:29:36.718 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:29:37.719 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.07ms.
+2024-03-20 06:29:37.720 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54790 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:29:37.960 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:29:38.962 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.06ms.
+2024-03-20 06:29:38.962 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54790 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:29:39.297 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:29:40.299 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.03ms.
+2024-03-20 06:29:40.299 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54790 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:29:40.634 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:29:41.635 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1000.93ms.
+2024-03-20 06:29:41.636 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54790 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:29:41.894 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:29:42.896 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.06ms.
+2024-03-20 06:29:42.896 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54790 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:29:43.101 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:29:44.102 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.04ms.
+2024-03-20 06:29:44.103 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54790 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:29:44.400 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:29:45.402 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.05ms.
+2024-03-20 06:29:45.402 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54790 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:29:45.754 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:29:46.755 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.05ms.
+2024-03-20 06:29:46.755 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54790 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:29:47.049 | DEBUG    | dramatiq.actor:__call__:180 - Received args=() kwargs={}.
+2024-03-20 06:29:48.050 | DEBUG    | dramatiq.actor:__call__:185 - Completed after 1001.06ms.
+2024-03-20 06:29:48.051 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54790 - "GET /test-monitoring/roll HTTP/1.1" 200
+2024-03-20 06:30:35.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:38586 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:31:35.597 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:35316 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:32:35.597 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:60898 - "GET /metrics HTTP/1.1" 200
+2024-03-20 06:33:23.027 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2024-03-20 06:33:23.127 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2024-03-20 06:33:23.127 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2024-03-20 06:33:23.128 | INFO     | uvicorn.server:serve:86 - Finished server process [1251695]
